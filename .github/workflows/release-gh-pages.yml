@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 16.x
       - run: npm ci
-      - run: ./node_modules/.bin/vite build --base=/html-javascript-css/ --outDir='../docs/html-javascript-css/'
+      - run: ./node_modules/.bin/vite build --base=/vite-project-sample/html-javascript-css/ --outDir='../docs/html-javascript-css/'
         env:
           VUE_APP_COMMIT_HASH: '${{ github.sha }}'
       - name: gh-pagesブランチを更新
