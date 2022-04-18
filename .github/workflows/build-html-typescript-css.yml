@@ -2,8 +2,8 @@ name: build-html-typescript-css
 on:
   push:
     branches: [ main ]
-    paths-ignore:
-    - '**.md'
+    paths:
+    - 'html-typescript-css'
   pull_request:
     branches: [ main ]
   workflow_dispatch:
