@@ -5,7 +5,11 @@
 
 version: 2
 updates:
-  - package-ecosystem: npm
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+　　　　- package-ecosystem: npm
     directory: /html-javascript-css/
     schedule:
       interval: daily
