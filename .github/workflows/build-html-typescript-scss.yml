@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
     paths:
-    - 'html-typescript-scss'
+    - 'html-typescript-scss/**'
   pull_request:
     branches: [ main ]
   workflow_dispatch:

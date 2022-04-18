@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
     paths:
-    - 'vue2'
+    - 'vue2/**'
   pull_request:
     branches: [ main ]
   workflow_dispatch:
