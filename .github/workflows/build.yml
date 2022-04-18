@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        directory: [ 'html-javascript-css', 'html-javascript-scss', 'html-typescript-css', 'html-typescript-scss' ]
+        directory: [ 'html-javascript-css', 'html-javascript-scss', 'html-typescript-css', 'html-typescript-scss', 'vue2', 'vue3' ]
     defaults:
       run:
         shell: pwsh

@@ -36,6 +36,16 @@ jobs:
         run: |
           npm ci
           ./node_modules/.bin/vite build --base=/vite-project-sample/html-typescript-scss/ --outDir='../docs/html-typescript-scss/'
+      - name: ビルド(vue2)
+        working-directory: ./vue2
+        run: |
+          npm ci
+          ./node_modules/.bin/vite build --base=/vite-project-sample/vue2/ --outDir='../docs/vue2/'
+      - name: ビルド(vue3)
+        working-directory: ./vue3
+        run: |
+          npm ci
+          ./node_modules/.bin/vite build --base=/vite-project-sample/vue3/ --outDir='../docs/vue3/'
       - name: gh-pagesブランチを更新
         run: |
           git --version
