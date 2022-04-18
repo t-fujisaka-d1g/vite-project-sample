@@ -25,3 +25,11 @@ updates:
     directory: /html-typescript-scss/
     schedule:
       interval: daily
+  - package-ecosystem: npm
+    directory: /vue2/
+    schedule:
+      interval: daily
+  - package-ecosystem: npm
+    directory: /vue3/
+    schedule:
+      interval: daily
