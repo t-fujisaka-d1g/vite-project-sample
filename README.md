@@ -13,5 +13,5 @@
 ## Vue.js
 | プロジェクト構成 | フォルダ | 確認ページ |
 ----|---- |---- 
-| Vue2 | [html-javascript-css](https://github.com/t-fujisaka-d1g/vite-project-sample/tree/main/vue2) | [確認ページ](https://t-fujisaka-d1g.github.io/vite-project-sample/vue2/index.html) |
-| Vue3 | [html-javascript-scss](https://github.com/t-fujisaka-d1g/vite-project-sample/tree/main/vue3) | [確認ページ](https://t-fujisaka-d1g.github.io/vite-project-sample/vue3/index.html) |
+| Vue2(TypeScript+Pinia) | [vue2](https://github.com/t-fujisaka-d1g/vite-project-sample/tree/main/vue2) | [確認ページ](https://t-fujisaka-d1g.github.io/vite-project-sample/vue2/index.html) |
+| Vue3(TypeScript+Pinia) | [vue3](https://github.com/t-fujisaka-d1g/vite-project-sample/tree/main/vue3) | [確認ページ](https://t-fujisaka-d1g.github.io/vite-project-sample/vue3/index.html) |
