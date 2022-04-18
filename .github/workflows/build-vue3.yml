@@ -1,0 +1,31 @@
+name: build-vue3
+on:
+  push:
+    branches: [ main ]
+    paths:
+    - 'vue3'
+    paths-ignore:
+    paths-ignore:
+    - '**.md'
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: vue3
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v3
+      - name: Node.jsセットアップ
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: 依存関係をインストール
+        run: npm ci
+      - name: ビルド
+        run: npm run build
+ 

@@ -1,7 +1,9 @@
-name: build
+name: build-html-javascript-css
 on:
   push:
     branches: [ main ]
+    paths:
+    - 'html-javascript-css'
     paths-ignore:
     - '**.md'
   pull_request:
@@ -10,14 +12,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        directory: [ 'html-javascript-css', 'html-javascript-scss', 'html-typescript-css', 'html-typescript-scss', 'vue2', 'vue3' ]
     defaults:
       run:
         shell: pwsh
-        working-directory: ${{ matrix.directory }}
-    name: ビルド(${{ matrix.directory }})
+        working-directory: html-javascript-css
     steps:
       - name: リポジトリをチェックアウト
         uses: actions/checkout@v3
