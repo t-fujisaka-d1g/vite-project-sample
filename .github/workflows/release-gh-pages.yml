@@ -11,16 +11,31 @@ jobs:
     defaults:
       run:
         shell: pwsh
-        working-directory: 'html-javascript-css'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: 16.x
-      - run: npm ci
-      - run: ./node_modules/.bin/vite build --base=/vite-project-sample/html-javascript-css/ --outDir='../docs/html-javascript-css/'
-        env:
-          VUE_APP_COMMIT_HASH: '${{ github.sha }}'
+      - name: ビルド(html-javascript-css)
+        working-directory: ./html-javascript-css
+        run: |
+          npm ci
+          ./node_modules/.bin/vite build --base=/vite-project-sample/html-javascript-css/ --outDir='../docs/html-javascript-css/'
+      - name: ビルド(html-javascript-scss)
+        working-directory: ./html-javascript-scss
+        run: |
+          npm ci
+          ./node_modules/.bin/vite build --base=/vite-project-sample/html-javascript-scss/ --outDir='../docs/html-javascript-scss/'
+      - name: ビルド(html-typescript-css)
+        working-directory: ./html-typescript-css
+        run: |
+          npm ci
+          ./node_modules/.bin/vite build --base=/vite-project-sample/html-typescript-css/ --outDir='../docs/html-typescript-css/'
+      - name: ビルド(html-typescript-scss)
+        working-directory: ./html-typescript-scss
+        run: |
+          npm ci
+          ./node_modules/.bin/vite build --base=/vite-project-sample/html-typescript-scss/ --outDir='../docs/html-typescript-scss/'
       - name: gh-pagesブランチを更新
         run: |
           git --version
