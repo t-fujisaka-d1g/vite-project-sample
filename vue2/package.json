@@ -20,7 +20,7 @@
   "devDependencies": {
     "@cypress/vite-dev-server": "^2.2.1",
     "@cypress/vue": "^2.2.4",
-    "@types/node": "^17.0.24",
+    "@types/node": "^18.11.19",
     "@vitejs/plugin-legacy": "^1.7.1",
     "@vue/runtime-dom": "^3.2.31",
     "cypress": "^9.1.0",
